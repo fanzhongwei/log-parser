@@ -1,0 +1,42 @@
+2020-03-14 20:24:11.318 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n】，开始...
+2020-03-14 20:24:11.344 [DEBUG] [main] c.t.l.l.LogLayout - Converter is ch.qos.logback.classic.pattern.DateConverter@4cc0edeb
+2020-03-14 20:24:11.345 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n】，结束...
+2020-03-14 20:24:11.382 [DEBUG] [main] c.t.l.p.MessageParser - find group  [%c:%L]-[%p] 
+2020-03-14 20:24:11.382 [DEBUG] [main] c.t.l.p.MessageParser - find group  [com.teddy.log.layout.LogLayout:32]-[DEBUG] 
+2020-03-14 20:24:11.396 [DEBUG] [main] c.t.l.p.MessageParser - find group :32]-[DEBUG] 
+2020-03-14 20:24:11.397 [DEBUG] [main] c.t.l.p.MessageParser - find group ]-[DEBUG] 
+2020-03-14 20:24:11.397 [DEBUG] [main] c.t.l.p.MessageParser - find group ] 
+2020-03-14 20:24:11.398 [DEBUG] [main] c.t.l.l.LogLayout - parse result:
+{Date=2020-03-14 15:06:11:214, Message=初始化日志格式【%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n】，开始..., Logger=com.teddy.log.layout.LogLayout, LineOfCaller=32, Level=DEBUG}
+2020-03-14 20:25:52.242 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，开始...
+2020-03-14 20:25:52.250 [DEBUG] [main] c.t.l.l.LogLayout - Converter is ch.qos.logback.classic.pattern.DateConverter@564fabc8
+2020-03-14 20:25:52.251 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，结束...
+2020-03-14 20:25:52.258 [DEBUG] [main] c.t.l.p.MessageParser - find group ] [main] c.t.l.l.LogLayout - 
+2020-03-14 20:25:52.260 [DEBUG] [main] c.t.l.p.MessageParser - find group ] c.t.l.l.LogLayout - 
+2020-03-14 20:25:52.261 [DEBUG] [main] c.t.l.p.MessageParser - find group  - 
+2020-03-14 20:25:52.262 [DEBUG] [main] c.t.l.l.LogLayout - parse result:
+{Date=2020-03-14 20:24:11.345, Level=DEBUG, Thread=main, Logger=c.t.l.l.LogLayout, Message=初始化日志格式【%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n】，结束...}
+2020-03-14 20:26:36.384 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，开始...
+2020-03-14 20:26:36.434 [DEBUG] [main] c.t.l.l.LogLayout - Converter is ch.qos.logback.classic.pattern.DateConverter@564fabc8
+2020-03-14 20:26:36.434 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，结束...
+2020-03-14 20:26:36.441 [DEBUG] [main] c.t.l.p.MessageParser - find group ] [main] c.t.l.l.LogLayout - 
+2020-03-14 20:26:36.443 [DEBUG] [main] c.t.l.p.MessageParser - find group ] c.t.l.l.LogLayout - 
+2020-03-14 20:26:36.444 [DEBUG] [main] c.t.l.p.MessageParser - find group  - 
+2020-03-14 20:26:36.444 [DEBUG] [main] c.t.l.l.LogLayout - parse result:
+{Date=2020-03-14 20:24:11.345, Level=DEBUG, Thread=main, Logger=c.t.l.l.LogLayout, Message=初始化日志格式【%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n】，结束...}
+2020-03-14 21:00:08.032 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，开始...
+2020-03-14 21:00:08.040 [DEBUG] [main] c.t.l.l.LogLayout - Converter is ch.qos.logback.classic.pattern.DateConverter@4678c730
+2020-03-14 21:00:08.041 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，结束...
+2020-03-14 21:00:08.070 [DEBUG] [main] c.t.l.p.MessageParser - find group ] [main] c.t.l.l.LogLayout - 
+2020-03-14 21:00:08.075 [DEBUG] [main] c.t.l.p.MessageParser - find group ] c.t.l.l.LogLayout - 
+2020-03-14 21:00:08.076 [DEBUG] [main] c.t.l.p.MessageParser - find group  - 
+2020-03-14 21:00:08.076 [DEBUG] [main] c.t.l.l.LogLayout - parse result:
+{Date=2020-03-14 20:24:11.345, Level=DEBUG, Thread=main, Logger=c.t.l.l.LogLayout, Message=初始化日志格式【%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n】，结束...}
+2020-03-14 21:00:24.162 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，开始...
+2020-03-14 21:00:24.180 [DEBUG] [main] c.t.l.l.LogLayout - Converter is ch.qos.logback.classic.pattern.DateConverter@6767c1fc
+2020-03-14 21:00:24.182 [DEBUG] [main] c.t.l.l.LogLayout - 初始化日志格式【%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n】，结束...
+2020-03-14 21:00:24.201 [DEBUG] [main] c.t.l.p.MessageParser - find group ] [main] c.t.l.l.LogLayout - 
+2020-03-14 21:00:24.206 [DEBUG] [main] c.t.l.p.MessageParser - find group ] c.t.l.l.LogLayout - 
+2020-03-14 21:00:24.208 [DEBUG] [main] c.t.l.p.MessageParser - find group  - 
+2020-03-14 21:00:24.210 [DEBUG] [main] c.t.l.l.LogLayout - parse result:
+{Date=2020-03-14 20:24:11.345, Level=DEBUG, Thread=main, Logger=c.t.l.l.LogLayout, Message=初始化日志格式【%d{yyyy-MM-dd HH:mm:ss:SSS , GMT+8} %m [%c:%L]-[%p] %n】，结束...}
