@@ -1,14 +1,15 @@
 package com.teddy.log.uitl;
 
-import ch.qos.logback.classic.pattern.LineSeparatorConverter;
-import ch.qos.logback.core.pattern.Converter;
-import ch.qos.logback.core.pattern.LiteralConverter;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+
+import ch.qos.logback.classic.pattern.LineSeparatorConverter;
+import ch.qos.logback.core.pattern.Converter;
+import ch.qos.logback.core.pattern.LiteralConverter;
 
 /**
  * 日志格式工具类
@@ -62,7 +63,7 @@ public class LogPartternUtils {
      * @return 正则表达式
      */
     public static String getLiteralsPatterns(Converter converter) {
-        return getPattern(converter);
+        return String.format("^.*%s.*$", getPattern(converter));
     }
 
     private static String replaceSpecial(String literal) {

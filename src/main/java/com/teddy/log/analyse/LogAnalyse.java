@@ -1,22 +1,22 @@
 package com.teddy.log.analyse;
 
-import com.teddy.log.bean.LogInfo;
-import com.teddy.log.layout.LogLayout;
-import com.teddy.log.split.LogSplit;
-import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.teddy.log.bean.LogInfo;
+import com.teddy.log.layout.LogLayout;
+import com.teddy.log.split.LogSplit;
 
 /**
  * 日志分析
@@ -37,11 +37,11 @@ public class LogAnalyse {
         Map<String, List<LogInfo>> levelLogsMap = analyseLog(fileName, pattern, charset);
 
         levelLogsMap.forEach((level, logInfos) -> {
-            if (ArrayUtils.contains(levels, level)) {
+            // if (ArrayUtils.contains(levels, level)) {
                 // 根据相似度合并日志
                 List<LogInfo> mergedLogInfo = mergeLogInfo(logInfos);
                 writeToFile(fileName, outDir, logInfos, charset);
-            }
+            // }
         });
     }
 

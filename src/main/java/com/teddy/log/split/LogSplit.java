@@ -1,13 +1,5 @@
 package com.teddy.log.split;
 
-import com.teddy.log.layout.LogLayout;
-import com.teddy.log.uitl.LogPartternUtils;
-import org.apache.commons.io.Charsets;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,6 +7,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.teddy.log.layout.LogLayout;
+import com.teddy.log.uitl.LogPartternUtils;
 
 /**
  * 日志拆分，每条日志一行记录
@@ -36,7 +35,7 @@ public class LogSplit {
             BufferedReader bufferedReader = new BufferedReader(reader);
 
             StringBuilder sb = new StringBuilder();
-            String patternStr = String.format("^.*%s.*$", LogPartternUtils.getLiteralsPatterns(logLayout.getConverter()));
+            String patternStr = LogPartternUtils.getLiteralsPatterns(logLayout.getConverter());
             Pattern pattern = Pattern.compile(patternStr);
             for(String line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()) {
                 if (StringUtils.isBlank(line)) {
