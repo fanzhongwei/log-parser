@@ -1,12 +1,13 @@
 package com.teddy.log.controller;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.teddy.log.layout.LogLayout;
 import com.teddy.log.uitl.LogPartternUtils;
+
+import reactor.core.publisher.Mono;
 
 /**
  * package com.teddy.log.controller <br/>
@@ -25,8 +26,8 @@ public class PatternController {
      * @return 正则
      */
     @GetMapping("/api/v1/parse/pattern")
-    public ResponseEntity<String> parsePattern(@RequestParam("pattern") String pattern) {
+    public Mono<String> parsePattern(@RequestParam("pattern") String pattern) {
         final String logPattern = LogPartternUtils.getLiteralsPatterns(new LogLayout(pattern).getConverter());
-        return ResponseEntity.ok(logPattern);
+        return Mono.just(logPattern);
     }
 }
