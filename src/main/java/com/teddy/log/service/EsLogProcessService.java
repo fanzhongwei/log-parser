@@ -16,7 +16,9 @@ public class EsLogProcessService {
     private static final Logger logger = LoggerFactory.getLogger(EsLogProcessService.class);
 
     public String processLog(String param) {
-        logger.debug("处理日志：{}", param);
+        logger.debug("处理前的日志：{}", param);
+
+        logger.debug("处理后的日志：{}", param);
         return param;
     }
 }

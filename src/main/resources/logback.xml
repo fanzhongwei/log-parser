@@ -23,6 +23,15 @@
         </encoder>
     </appender>
 
+    <logger name="org.springframework.cloud.gateway" level="debug" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+    <logger name="com.teddy" level="debug" additivity="false">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="file"/>
+    </logger>
+
     <root level="error">
         <appender-ref ref="stdout"/>
         <appender-ref ref="file"/>

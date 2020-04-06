@@ -19,6 +19,6 @@ public class LogParserApplication {
      * @param args 入口参数
      */
     public static void main(String[] args) {
-        SpringApplication.run(LogParserApplication.class);
+        SpringApplication.run(LogParserApplication.class, args);
     }
 }
