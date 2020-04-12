@@ -13,6 +13,7 @@ import com.teddy.log.parser.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 
 import java.util.*;
 
@@ -78,6 +79,33 @@ public class LogLayout {
         logInfo.setMessage(logMap.get(StringUtils.removeEnd(MessageConverter.class.getSimpleName(), "Converter")));
         logInfo.setLog(logStr);
         return logInfo;
+    }
+
+    /**
+     * 获取日期格式
+     *
+     * @return 日期格式
+     */
+    public String getDatePattern() {
+        Converter next = head;
+        while (next != null) {
+            if (next instanceof DateConverter) {
+                return getDatePattern((DateConverter) next);
+            }
+        }
+        return "yyyy-MM-dd HH:mm:ss,SSS";
+    }
+
+    private String getDatePattern(DateConverter next) {
+        String datePattern = next.getFirstOption();
+        if (datePattern == null) {
+            datePattern = "yyyy-MM-dd HH:mm:ss,SSS";
+        }
+
+        if (datePattern.equals("ISO8601")) {
+            datePattern = "yyyy-MM-dd HH:mm:ss,SSS";
+        }
+        return datePattern;
     }
 
     /**

@@ -59,12 +59,12 @@ public class GatewayConfiguration {
     }
 
     private Publisher<String> printRequest(String url, String s) {
-        logger.debug("send to [{}] request body is: {}", url, s);
+        logger.debug("send [{}] to [{}] request body is: {}", url, esUrl, s);
         return Mono.justOrEmpty(s);
     }
 
     private Publisher<String> printResponse(String url, String s) {
-        logger.debug("url [{}] response body is: {}", url, s);
+        logger.debug("url [{}] response body is: {}", esUrl, s);
         return Mono.justOrEmpty(s);
     }
 }

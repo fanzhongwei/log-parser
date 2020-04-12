@@ -5,8 +5,10 @@ import com.teddy.log.split.LogSplit;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.ResourceUtils;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -98,8 +100,8 @@ public class LogLayoutTest {
     }
 
     @Test
-    public void test_file_have_39_logs(){
-        File logFile = new File("/home/code/log-parser/src/test/resources/test_log.log");
+    public void test_file_have_39_logs() throws FileNotFoundException {
+        File logFile = ResourceUtils.getFile("classpath:test_log.log");
         LogLayout layout = new LogLayout("%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{20} - %msg%n");
         List<String> splitLogs = LogSplit.split(logFile, layout,"UTF-8");
 
