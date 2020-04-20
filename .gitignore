@@ -12,4 +12,5 @@
 *.tar.gz
 *.rar
 rebel.xml
+logback-test.xml
 
