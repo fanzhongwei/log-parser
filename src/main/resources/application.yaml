@@ -3,4 +3,7 @@ server:
   servlet:
     context-path: /
 
-elasticsearch: http://172.25.17.201:9200
+elasticsearch: http://172.25.17.201:9300
+spring:
+  codec:
+    max-in-memory-size: 50MB

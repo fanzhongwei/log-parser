@@ -2,6 +2,7 @@ package com.teddy.log;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
  * package com.teddy.log <br/>
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 20-3-25
  */
 @SpringBootApplication
+@EnableCaching
 public class LogParserApplication {
 
     /**

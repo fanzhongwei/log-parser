@@ -1,5 +1,16 @@
 package com.teddy.log.layout;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.teddy.log.bean.LogInfo;
+import com.teddy.log.parser.*;
+
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.PatternLayout;
 import ch.qos.logback.classic.pattern.*;
@@ -8,14 +19,6 @@ import ch.qos.logback.core.pattern.Converter;
 import ch.qos.logback.core.pattern.ConverterUtil;
 import ch.qos.logback.core.pattern.LiteralConverter;
 import ch.qos.logback.core.pattern.parser.Parser;
-import com.teddy.log.bean.LogInfo;
-import com.teddy.log.parser.*;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
-
-import java.util.*;
 
 /**
  * log layout
